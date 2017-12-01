@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<yalantis.com.sidemenu.sample.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout
+        android:tag="Bottom2"
+        android:layout_width="190dp"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/magnifier"
+            android:src="@drawable/magnifier"
+            android:background="#f7e79c"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_height="match_parent"
+            android:layout_width="60dp" />
+
+        <ImageView
+            android:id="@+id/star"
+            android:src="@drawable/star"
+            android:background="#4cd964"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_height="match_parent"
+            android:layout_width="60dp" />
+
+        <ImageView
+            android:id="@+id/trash"
+            android:src="@drawable/trash"
+            android:background="@drawable/red"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_height="match_parent"
+            android:layout_width="60dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:background="@drawable/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Title"
+                android:layout_width="46dp"
+                android:layout_height="44dp"
+                android:id="@+id/textView6"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="18sp"
+                android:textAlignment="center"
+                android:gravity="left"/>
+
+            <TextView
+                android:tag="Hover"
+                android:text="理解（りかい）されるということは、一種（いっしゅ）の贅沢（ぜいたく）である。"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/textView7" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="43dp">
+
+            <TextView
+                android:text="Date"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:id="@+id/textView5"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="18sp"
+                android:gravity="left"/>
+
+            <TextView
+                android:tag="Hover"
+                android:text="理解（りかい）されるということは、一種（いっしゅ）の贅沢（ぜいたく）である。"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</yalantis.com.sidemenu.sample.SwipeLayout>
