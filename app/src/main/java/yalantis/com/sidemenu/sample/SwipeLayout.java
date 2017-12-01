@@ -61,6 +61,19 @@ public class SwipeLayout extends FrameLayout {
     private float mWillOpenPercentAfterOpen = 0.75f;
     private float mWillOpenPercentAfterClose = 0.25f;
 
+    private boolean starred = Boolean.FALSE;
+
+    public void setStar(){
+        if(starred==Boolean.FALSE)
+            starred = Boolean.TRUE;
+        else
+            starred = Boolean.FALSE;
+    }
+
+    public boolean getStar(){
+        return starred;
+    }
+
     public enum DragEdge {
         Left,
         Top,

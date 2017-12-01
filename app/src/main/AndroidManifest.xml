@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/appicon"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
@@ -20,18 +20,19 @@
         <activity
             android:name=".MemBookActivity"
             android:configChanges="orientation|screenSize"
-            android:label="@string/mem_book">
-        </activity>
+            android:label="@string/mem_book" />
         <activity
             android:name=".EditActivity"
             android:configChanges="orientation|screenSize"
-            android:label="@string/mem_book">
-        </activity>
+            android:label="@string/mem_book" />
         <activity
             android:name=".MyMemBookActivity"
             android:configChanges="orientation|screenSize"
-            android:label="@string/mem_book">
-        </activity>
+            android:label="@string/mem_book" />
+        <activity
+            android:name="com.jiadr2368.ShowNoteActivity"
+            android:label="@string/title_activity_show_note"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>

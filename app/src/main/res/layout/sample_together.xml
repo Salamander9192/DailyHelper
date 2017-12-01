@@ -3,12 +3,13 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:id="@+id/sample_bottle">
 
     <include android:id="@+id/sample2_0" layout="@layout/sample2"
-        android:layout_width="374dp" android:layout_height="80dp"
-        android:layout_marginTop="20dp"
-        android:layout_weight="0.06" />
+    android:layout_width="374dp" android:layout_height="80dp"
+    android:layout_marginTop="20dp"
+    android:layout_weight="0.06" />
 
 
     <include android:id="@+id/sample2_1" layout="@layout/sample2"

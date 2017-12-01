@@ -84,7 +84,8 @@
                 android:tag="Hover"
                 android:text="理解（りかい）されるということは、一種（いっしゅ）の贅沢（ぜいたく）である。"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:id="@+id/textView4" />
 
         </LinearLayout>
 

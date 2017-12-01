@@ -72,6 +72,13 @@ public class MainActivity extends AppCompatActivity implements ViewAnimator.View
         list.add(menuItem3);
         SlideMenuItem menuItem4 = new SlideMenuItem(ContentFragment.CALCULATOR,R.drawable.icn_4);
         list.add(menuItem4);
+        SlideMenuItem menuItem5 = new SlideMenuItem(ContentFragment.SHOP,R.drawable.icn_5);
+        list.add(menuItem5);
+        SlideMenuItem menuItem6 = new SlideMenuItem(ContentFragment.PARTY,R.drawable.icn_6);
+        list.add(menuItem6);
+        SlideMenuItem menuItem7 = new SlideMenuItem(ContentFragment.MOVIE,R.drawable.icn_7);
+        list.add(menuItem7);
+
         //更多功能，后续再增加
     }
 

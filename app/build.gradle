@@ -25,10 +25,10 @@ android {
 dependencies {
     compile project(':library')
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:23.1.1'
-    compile 'com.github.ozodrukh:CircularReveal:1.0.4'
     //不注释掉可能会出问题:more than one library ...
 //    compile 'com.github.yalantis:Side-Menu.Android:1.0.1'
-    compile 'com.github.ozodrukh:CircularReveal:(latest-release)@aar'
+    
 
-}
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.github.ozodrukh:CircularReveal:1.0.4'
+    compile 'com.android.support:design:23.4.0'}
