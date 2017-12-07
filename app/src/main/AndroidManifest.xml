@@ -33,6 +33,10 @@
             android:name="com.jiadr2368.ShowNoteActivity"
             android:label="@string/title_activity_show_note"
             android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.jiadr2368.EditNoteActivity"
+            android:label="@string/title_activity_edit_note"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>

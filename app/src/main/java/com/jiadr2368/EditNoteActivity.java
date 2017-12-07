@@ -1,24 +1,23 @@
 package com.jiadr2368;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.EditText;
 
 import yalantis.com.sidemenu.sample.R;
 
-public class ShowNoteActivity extends AppCompatActivity {
+public class EditNoteActivity extends AppCompatActivity {
 
-    TextView tv;
+    EditText et;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_show_note);
+        setContentView(R.layout.activity_edit_note);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -26,16 +25,12 @@ public class ShowNoteActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Snackbar.make(view, "Begin your editing", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-                Intent intent = new Intent(ShowNoteActivity.this,EditNoteActivity.class);
-                tv = (TextView)findViewById(R.id.yourownnote);
-                intent.putExtra("Note",getIntent().getStringExtra("Note"));
-                startActivity(intent);
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
             }
         });
 
-        tv = (TextView)findViewById(R.id.yourownnote);
-        tv.setText(getIntent().getStringExtra("Note"));
+        et = (EditText) findViewById(R.id.yourownnoteedit);
+        et.setText(getIntent().getStringExtra("Note"));
     }
 }

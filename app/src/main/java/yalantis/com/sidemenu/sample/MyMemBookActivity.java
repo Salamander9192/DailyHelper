@@ -8,6 +8,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.jiadr2368.EditNoteActivity;
 import com.jiadr2368.ShowNoteActivity;
 
 import java.text.SimpleDateFormat;
@@ -55,9 +56,11 @@ public class MyMemBookActivity extends AppCompatActivity {
         sample.findViewById(R.id.magnifier).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClassName("com.jiadr2368","com.jiadr2368.EditNoteActivity");
-                startActivityForResult(intent,0);
+                Intent intent = new Intent(MyMemBookActivity.this,EditNoteActivity.class);
+                tv = (TextView)findViewById(R.id.textView7);
+                text = tv.getText().toString();
+                intent.putExtra("Note",text);
+                startActivity(intent);
             }
         });
 
