@@ -1,8 +1,10 @@
 package yalantis.com.sidemenu.sample;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -17,9 +19,12 @@ import java.util.Date;
 public class MyMemBookActivity extends AppCompatActivity {
 
     private SwipeLayout sample;
-    TextView tv;
+    TextView tv1,tv,notetitle_tv,notetime_tv;
     LinearLayout ll;
-    private String text;
+    private String text,title;
+    SharedPreferences sp;
+    SharedPreferences.Editor ed;
+    String notecontent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +34,17 @@ public class MyMemBookActivity extends AppCompatActivity {
         sample = (SwipeLayout) findViewById(R.id.sample2_0);
         sample.setShowMode(SwipeLayout.ShowMode.LayDown);
         sample.addDrag(SwipeLayout.DragEdge.Right, sample.findViewWithTag("Bottom2"));
+
+        //加载文本内容
+        sp = getSharedPreferences("content_note",MODE_PRIVATE);
+        ed = sp.edit();
+        notetitle_tv = (TextView)findViewById(R.id.textView7);
+        notetitle_tv.setText(sp.getString("notetitle_0",null));
+        title = sp.getString("notetitle_0",null);
+        notetime_tv = (TextView)findViewById(R.id.textView4);
+        notetime_tv.setText(sp.getString("notetime_0",null));
+        notecontent = sp.getString("notecontent_0",null);
+
 //        sample2.setShowMode(SwipeLayout.ShowMode.PullOut);
 
         sample.findViewById(R.id.star).setOnClickListener(new View.OnClickListener() {
@@ -45,11 +61,16 @@ public class MyMemBookActivity extends AppCompatActivity {
         sample.findViewById(R.id.trash).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tv = (TextView)sample.findViewById(R.id.textView7);
-                tv.setText("");
-                tv = (TextView)sample.findViewById(R.id.textView4);
+                tv1 = (TextView)findViewById(R.id.textView7);
+                tv1.setText("");
+                tv = (TextView)findViewById(R.id.textView4);
                 SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
                 tv.setText(df.format(new Date()));
+                //保存下修改
+                ed.putString("notetitle_0","");
+                ed.putString("notecontent_0","");
+                ed.putString("notetime_0",df.format(new Date()));
+                ed.commit();
             }
         });
 
@@ -58,8 +79,8 @@ public class MyMemBookActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MyMemBookActivity.this,EditNoteActivity.class);
                 tv = (TextView)findViewById(R.id.textView7);
-                text = tv.getText().toString();
-                intent.putExtra("Note",text);
+                intent.putExtra("Title",title);
+                intent.putExtra("Note",notecontent);
                 startActivity(intent);
             }
         });
@@ -69,12 +90,22 @@ public class MyMemBookActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MyMemBookActivity.this,ShowNoteActivity.class);
                 tv = (TextView)findViewById(R.id.textView7);
-                text = tv.getText().toString();
-                intent.putExtra("Note",text);
+                intent.putExtra("Title",title);
+                intent.putExtra("Note",notecontent);
                 startActivity(intent);
             }
         });
 
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode,KeyEvent event){
+        if(keyCode == KeyEvent.KEYCODE_BACK){
+            Intent intent = new Intent(MyMemBookActivity.this,MainActivity.class);
+            startActivity(intent);
+            this.finish();
+        }
+        return super.onKeyDown(keyCode,event);
     }
 
 }
