@@ -1,91 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <yalantis.com.sidemenu.sample.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:id="@+id/sample_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible">
+
     <LinearLayout
-        android:tag="Bottom2"
         android:layout_width="190dp"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:tag="Bottom2">
+
         <ImageView
             android:id="@+id/magnifier"
-            android:src="@drawable/magnifier"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
             android:background="#f7e79c"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:layout_height="match_parent"
-            android:layout_width="60dp" />
+            android:src="@drawable/magnifier" />
 
         <ImageView
             android:id="@+id/star"
-            android:src="@drawable/star"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
             android:background="#4cd964"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:layout_height="match_parent"
-            android:layout_width="60dp" />
+            android:src="@drawable/star" />
 
         <ImageView
             android:id="@+id/trash"
-            android:src="@drawable/trash"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
             android:background="@drawable/red"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:layout_height="match_parent"
-            android:layout_width="60dp" />
+            android:src="@drawable/trash" />
     </LinearLayout>
 
     <LinearLayout
-        android:padding="10dp"
-        android:orientation="vertical"
-        android:background="@drawable/white"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/white"
+        android:orientation="vertical"
+        android:padding="10dp"
         android:weightSum="1">
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <TextView
-                android:text="Title"
+                android:id="@+id/textView6"
                 android:layout_width="46dp"
                 android:layout_height="44dp"
-                android:id="@+id/textView6"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                android:textSize="18sp"
+                android:gravity="left"
+                android:text="Title"
                 android:textAlignment="center"
-                android:gravity="left"/>
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
 
             <TextView
-                android:tag="Hover"
-                android:text="理解（りかい）されるということは、一種（いっしゅ）の贅沢（ぜいたく）である。"
+                android:id="@+id/textView7"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/textView7" />
+                android:tag="Hover"
+                android:text="理解（りかい）されるということは、一種（いっしゅ）の贅沢（ぜいたく）である。"
+                android:textColor="@android:color/black" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="43dp">
+            android:layout_height="43dp"
+            android:orientation="horizontal">
 
             <TextView
-                android:text="Date"
+                android:id="@+id/textView5"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:id="@+id/textView5"
+                android:gravity="left"
+                android:text="Date"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                android:textSize="18sp"
-                android:gravity="left"/>
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
 
             <TextView
-                android:tag="Hover"
-                android:text="理解（りかい）されるということは、一種（いっしゅ）の贅沢（ぜいたく）である。"
+                android:id="@+id/textView4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/textView4" />
+                android:tag="Hover"
+                android:text="理解（りかい）されるということは、一種（いっしゅ）の贅沢（ぜいたく）である。"
+                android:textColor="@android:color/black" />
 
         </LinearLayout>
 

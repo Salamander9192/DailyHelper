@@ -10,7 +10,8 @@
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation|screenSize"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,7 +29,8 @@
         <activity
             android:name=".MyMemBookActivity"
             android:configChanges="orientation|screenSize"
-            android:label="@string/mem_book" />
+            android:label="@string/mem_book"
+            android:launchMode="singleTask"/>
         <activity
             android:name="com.jiadr2368.ShowNoteActivity"
             android:label="@string/title_activity_show_note"

@@ -29,7 +29,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="195dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/notebook"
+                android:src="@drawable/aaa"
                 app:layout_collapseMode="parallax" />
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>

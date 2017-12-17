@@ -61,7 +61,17 @@ public class SwipeLayout extends FrameLayout {
     private float mWillOpenPercentAfterOpen = 0.75f;
     private float mWillOpenPercentAfterClose = 0.25f;
 
-    private boolean starred = Boolean.FALSE;
+    public boolean starred = Boolean.FALSE;
+
+    public int note_num;
+
+    public void setNum(int num){
+        note_num = num;
+    }
+
+    public int getNum(){
+        return note_num;
+    }
 
     public void setStar(){
         if(starred==Boolean.FALSE)

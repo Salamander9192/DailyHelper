@@ -23,14 +23,14 @@
             android:orientation="vertical">
 
             <TextView
-                android:text="Memory Book"
+                android:id="@+id/memTxt"
                 android:layout_width="match_parent"
                 android:layout_height="64dp"
-                android:id="@+id/memTxt"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:background="?attr/colorPrimary"
                 android:gravity="center"
-                android:textSize="24sp"
-                android:background="?attr/colorPrimary" />
+                android:text="Memory Book"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="24sp" />
 
             <ListView
                 android:layout_width="317dp"
